@@ -1,14 +1,15 @@
 # AI News Aggregator
+
 > **Summarised by Abdi Timer and his AI Team**
 
-![AI News Inteface](/Users/abditimer/.gemini/antigravity/brain/538042c8-63be-45f6-9b43-6236df183875/.system_generated/recordings/ui_verification_final_polished_1769724612696/screenshot_ai_news_articles.png)
+![AI News Inteface](/homepage_pic.png)
 
 A minimalist, editorial-style news aggregator that curates the latest updates from the frontier of Artificial Intelligence. Powered by a local LLM (**Qwen 2.5**) to provide instant, intelligent summaries.
 
 ## Features
 
 - **Multi-Source Aggregation**: Real-time feeds from OpenAI, Anthropic, Google DeepMind, and Meta AI.
-- **Intelligent Summarization**: 
+- **Intelligent Summarization**:
   - **Instant Glances**: Every article gets a one-line AI generated summary.
   - **Trend Analysis**: 30-day and 1-year views feature a "Trend Report" identifying macro patterns (e.g., "The Rise of Open Weights").
 - **Privacy-First**: Runs completely locally using SQLite and Ollama.
@@ -30,11 +31,13 @@ A minimalist, editorial-style news aggregator that curates the latest updates fr
 ### Installation
 
 1. **Clone the repo**
+
    ```bash
    git clone https://github.com/yourusername/aggregator_ai_site.git
    ```
 
 2. **Setup Backend**
+
    ```bash
    cd backend
    python -m venv venv
@@ -44,6 +47,7 @@ A minimalist, editorial-style news aggregator that curates the latest updates fr
    ```
 
 3. **Start Servers**
+
    ```bash
    # Terminal 1: Backend
    source backend/venv/bin/activate
@@ -67,13 +71,17 @@ A minimalist, editorial-style news aggregator that curates the latest updates fr
 This site is deployed as a **Static Snapshot**. The database is not queried in real-time on the live site. Instead, a static JSON file is generated and served.
 
 ### 1. Generate Static Data
+
 Dumps the current SQLite database (and generated summaries) into `frontend/public/data.json`:
+
 ```bash
 python scripts/generate_static_data.py
 ```
 
 ### 2. Build & Deploy
+
 Bundles the React app (with the data file) and pushes to the `gh-pages` branch:
+
 ```bash
 cd frontend
 npm run build
