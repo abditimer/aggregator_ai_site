@@ -20,7 +20,7 @@ def generate_static_data():
     # 1. Fetch ALL articles (ordered by date)
     # We fetch everything, frontend will filter/paginate
     print("Fetching articles...")
-    c.execute('''SELECT id, title, url, source_name, published_at, source_type, summary
+    c.execute('''SELECT id, title, url, source_name as source, published_at as published, source_type as type, summary
                  FROM articles
                  ORDER BY published_at DESC''')
     articles = [dict(row) for row in c.fetchall()]
