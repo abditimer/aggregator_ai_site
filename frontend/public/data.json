@@ -1,6 +1,312 @@
 {
-  "generated_at": "2026-01-29T23:19:54.285258",
+  "generated_at": "2026-02-14T13:06:31.298618",
   "articles": [
+    {
+      "id": 5687,
+      "title": "GPT-5.2 derives a new result in theoretical physics",
+      "url": "https://openai.com/index/new-result-theoretical-physics",
+      "source_name": "OpenAI",
+      "published_at": "2026-02-13 11:00:00",
+      "source_type": "blog",
+      "summary": null
+    },
+    {
+      "id": 5688,
+      "title": "Introducing Lockdown Mode and Elevated Risk labels in ChatGPT",
+      "url": "https://openai.com/index/introducing-lockdown-mode-and-elevated-risk-labels-in-chatgpt",
+      "source_name": "OpenAI",
+      "published_at": "2026-02-13 10:00:00",
+      "source_type": "blog",
+      "summary": null
+    },
+    {
+      "id": 5690,
+      "title": "Scaling social science research",
+      "url": "https://openai.com/index/scaling-social-science-research",
+      "source_name": "OpenAI",
+      "published_at": "2026-02-13 09:00:00",
+      "source_type": "blog",
+      "summary": null
+    },
+    {
+      "id": 5689,
+      "title": "Beyond rate limits: scaling access to Codex and Sora",
+      "url": "https://openai.com/index/beyond-rate-limits",
+      "source_name": "OpenAI",
+      "published_at": "2026-02-13 09:00:00",
+      "source_type": "blog",
+      "summary": null
+    },
+    {
+      "id": 5678,
+      "title": "Chris Liddell appointed to Anthropic\u2019s board of directors",
+      "url": "https://www.anthropic.com/news/chris-liddell-appointed-anthropic-board",
+      "source_name": "Anthropic",
+      "published_at": "2026-02-13 00:00:00",
+      "source_type": "blog",
+      "summary": null
+    },
+    {
+      "id": 5677,
+      "title": "Anthropic partners with CodePath to bring Claude to the US\u2019s largest collegiate computer science program",
+      "url": "https://www.anthropic.com/news/anthropic-codepath-partnership",
+      "source_name": "Anthropic",
+      "published_at": "2026-02-13 00:00:00",
+      "source_type": "blog",
+      "summary": null
+    },
+    {
+      "id": 6533,
+      "title": "Gemini 3 Deep Think: Advancing science, research and engineering",
+      "url": "https://deepmind.google/blog/gemini-3-deep-think-advancing-science-research-and-engineering/",
+      "source_name": "Google DeepMind",
+      "published_at": "2026-02-12 16:15:09",
+      "source_type": "blog",
+      "summary": null
+    },
+    {
+      "id": 5691,
+      "title": "Introducing GPT-5.3-Codex-Spark",
+      "url": "https://openai.com/index/introducing-gpt-5-3-codex-spark",
+      "source_name": "OpenAI",
+      "published_at": "2026-02-12 10:00:00",
+      "source_type": "blog",
+      "summary": null
+    },
+    {
+      "id": 5680,
+      "title": "Anthropic is donating $20 million to Public First Action",
+      "url": "https://www.anthropic.com/news/donate-public-first-action",
+      "source_name": "Anthropic",
+      "published_at": "2026-02-12 00:00:00",
+      "source_type": "blog",
+      "summary": null
+    },
+    {
+      "id": 5673,
+      "title": "Anthropic raises $30 billion in Series G funding at $380 billion post-money valuation",
+      "url": "https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation",
+      "source_name": "Anthropic",
+      "published_at": "2026-02-12 00:00:00",
+      "source_type": "blog",
+      "summary": null
+    },
+    {
+      "id": 6633,
+      "title": "The Death of Traditional Testing: Agentic Development Broke a 50-Year-Old Field, JiTTesting Can Revive It",
+      "url": "https://engineering.fb.com/2026/02/11/developer-tools/the-death-of-traditional-testing-agentic-development-jit-testing-revival/",
+      "source_name": "Meta AI",
+      "published_at": "2026-02-11 17:00:05",
+      "source_type": "blog",
+      "summary": null
+    },
+    {
+      "id": 5692,
+      "title": "Harness engineering: leveraging Codex in an agent-first world",
+      "url": "https://openai.com/index/harness-engineering",
+      "source_name": "OpenAI",
+      "published_at": "2026-02-11 09:00:00",
+      "source_type": "blog",
+      "summary": null
+    },
+    {
+      "id": 5681,
+      "title": "Covering electricity price increases from our data centers",
+      "url": "https://www.anthropic.com/news/covering-electricity-price-increases",
+      "source_name": "Anthropic",
+      "published_at": "2026-02-11 00:00:00",
+      "source_type": "blog",
+      "summary": null
+    },
+    {
+      "id": 6634,
+      "title": "Building Prometheus: How Backend Aggregation Enables Gigawatt-Scale AI Clusters",
+      "url": "https://engineering.fb.com/2026/02/09/data-center-engineering/building-prometheus-how-backend-aggregation-enables-gigawatt-scale-ai-clusters/",
+      "source_name": "Meta AI",
+      "published_at": "2026-02-09 17:00:33",
+      "source_type": "blog",
+      "summary": null
+    },
+    {
+      "id": 6534,
+      "title": "Accelerating Mathematical and Scientific Discovery with Gemini Deep Think",
+      "url": "https://deepmind.google/blog/accelerating-mathematical-and-scientific-discovery-with-gemini-deep-think/",
+      "source_name": "Google DeepMind",
+      "published_at": "2026-02-09 16:12:06",
+      "source_type": "blog",
+      "summary": null
+    },
+    {
+      "id": 5694,
+      "title": "Bringing ChatGPT to GenAI.mil",
+      "url": "https://openai.com/index/bringing-chatgpt-to-genaimil",
+      "source_name": "OpenAI",
+      "published_at": "2026-02-09 11:00:00",
+      "source_type": "blog",
+      "summary": null
+    },
+    {
+      "id": 5693,
+      "title": "Testing ads in ChatGPT",
+      "url": "https://openai.com/index/testing-ads-in-chatgpt",
+      "source_name": "OpenAI",
+      "published_at": "2026-02-09 11:00:00",
+      "source_type": "blog",
+      "summary": null
+    },
+    {
+      "id": 5695,
+      "title": "Making AI work for everyone, everywhere: our approach to localization",
+      "url": "https://openai.com/index/our-approach-to-localization",
+      "source_name": "OpenAI",
+      "published_at": "2026-02-06 10:00:00",
+      "source_type": "blog",
+      "summary": null
+    },
+    {
+      "id": 5696,
+      "title": "GPT-5 lowers the cost of cell-free protein synthesis",
+      "url": "https://openai.com/index/gpt-5-lowers-protein-synthesis-cost",
+      "source_name": "OpenAI",
+      "published_at": "2026-02-05 11:00:00",
+      "source_type": "blog",
+      "summary": null
+    },
+    {
+      "id": 5697,
+      "title": "Introducing Trusted Access for Cyber",
+      "url": "https://openai.com/index/trusted-access-for-cyber",
+      "source_name": "OpenAI",
+      "published_at": "2026-02-05 10:00:00",
+      "source_type": "blog",
+      "summary": null
+    },
+    {
+      "id": 5698,
+      "title": "Introducing OpenAI Frontier",
+      "url": "https://openai.com/index/introducing-openai-frontier",
+      "source_name": "OpenAI",
+      "published_at": "2026-02-05 06:00:00",
+      "source_type": "blog",
+      "summary": null
+    },
+    {
+      "id": 5701,
+      "title": "GPT-5.3-Codex System Card",
+      "url": "https://openai.com/index/gpt-5-3-codex-system-card",
+      "source_name": "OpenAI",
+      "published_at": "2026-02-05 00:00:00",
+      "source_type": "blog",
+      "summary": null
+    },
+    {
+      "id": 5700,
+      "title": "Navigating health questions with ChatGPT",
+      "url": "https://openai.com/index/navigating-health-questions",
+      "source_name": "OpenAI",
+      "published_at": "2026-02-05 00:00:00",
+      "source_type": "blog",
+      "summary": null
+    },
+    {
+      "id": 5699,
+      "title": "Introducing GPT-5.3-Codex",
+      "url": "https://openai.com/index/introducing-gpt-5-3-codex",
+      "source_name": "OpenAI",
+      "published_at": "2026-02-05 00:00:00",
+      "source_type": "blog",
+      "summary": null
+    },
+    {
+      "id": 5682,
+      "title": "Introducing Claude Opus 4.6",
+      "url": "https://www.anthropic.com/news/claude-opus-4-6",
+      "source_name": "Anthropic",
+      "published_at": "2026-02-05 00:00:00",
+      "source_type": "blog",
+      "summary": null
+    },
+    {
+      "id": 6635,
+      "title": "No Display? No Problem: Cross-Device Passkey Authentication for XR Devices",
+      "url": "https://engineering.fb.com/2026/02/04/security/cross-device-passkey-authentication-for-xr-devices-meta-quest/",
+      "source_name": "Meta AI",
+      "published_at": "2026-02-04 22:00:07",
+      "source_type": "blog",
+      "summary": null
+    },
+    {
+      "id": 5702,
+      "title": "Unlocking the Codex harness: how we built the App Server",
+      "url": "https://openai.com/index/unlocking-the-codex-harness",
+      "source_name": "OpenAI",
+      "published_at": "2026-02-04 13:00:00",
+      "source_type": "blog",
+      "summary": null
+    },
+    {
+      "id": 5703,
+      "title": "VfL Wolfsburg turns ChatGPT into a club-wide capability",
+      "url": "https://openai.com/index/vfl-wolfsburg",
+      "source_name": "OpenAI",
+      "published_at": "2026-02-04 00:00:00",
+      "source_type": "blog",
+      "summary": null
+    },
+    {
+      "id": 5675,
+      "title": "Claude is a space to think",
+      "url": "https://www.anthropic.com/news/claude-is-a-space-to-think",
+      "source_name": "Anthropic",
+      "published_at": "2026-02-04 00:00:00",
+      "source_type": "blog",
+      "summary": null
+    },
+    {
+      "id": 5684,
+      "title": "Apple\u2019s Xcode now supports the Claude Agent SDK",
+      "url": "https://www.anthropic.com/news/apple-xcode-claude-agent-sdk",
+      "source_name": "Anthropic",
+      "published_at": "2026-02-03 00:00:00",
+      "source_type": "blog",
+      "summary": null
+    },
+    {
+      "id": 5705,
+      "title": "Snowflake and OpenAI partner to bring frontier intelligence to enterprise data",
+      "url": "https://openai.com/index/snowflake-partnership",
+      "source_name": "OpenAI",
+      "published_at": "2026-02-02 06:00:00",
+      "source_type": "blog",
+      "summary": null
+    },
+    {
+      "id": 5706,
+      "title": "Introducing the Codex app",
+      "url": "https://openai.com/index/introducing-the-codex-app",
+      "source_name": "OpenAI",
+      "published_at": "2026-02-02 00:00:00",
+      "source_type": "blog",
+      "summary": null
+    },
+    {
+      "id": 5685,
+      "title": "Anthropic partners with Allen Institute and Howard Hughes Medical Institute to accelerate scientific discovery",
+      "url": "https://www.anthropic.com/news/anthropic-partners-with-allen-institute-and-howard-hughes-medical-institute",
+      "source_name": "Anthropic",
+      "published_at": "2026-02-02 00:00:00",
+      "source_type": "blog",
+      "summary": null
+    },
+    {
+      "id": 5674,
+      "title": "Claude on Mars",
+      "url": "https://www.anthropic.com/mars",
+      "source_name": "Anthropic",
+      "published_at": "2026-01-30 00:00:00",
+      "source_type": "blog",
+      "summary": null
+    },
     {
       "id": 1751,
       "title": "Project Genie: Experimenting with infinite, interactive worlds",
@@ -18,6 +324,15 @@
       "published_at": "2026-01-29 10:00:00",
       "source_type": "blog",
       "summary": "OpenAI has developed an internal AI data agent that utilizes GPT-5, Codex, and memory capabilities to efficiently process and analyze large-scale datasets, allowing for quick insights in just a few minutes."
+    },
+    {
+      "id": 5708,
+      "title": "Taisei Corporation shapes the next generation of talent with ChatGPT",
+      "url": "https://openai.com/index/taisei",
+      "source_name": "OpenAI",
+      "published_at": "2026-01-29 00:00:00",
+      "source_type": "blog",
+      "summary": null
     },
     {
       "id": 926,
@@ -5326,6 +5641,15 @@
       "url": "https://openai.com/index/extracting-concepts-from-gpt-4",
       "source_name": "OpenAI",
       "published_at": "2024-06-06 00:00:00",
+      "source_type": "blog",
+      "summary": null
+    },
+    {
+      "id": 6175,
+      "title": "Disrupting deceptive uses of AI by covert influence operations",
+      "url": "https://openai.com/index/disrupting-deceptive-uses-of-ai-by-covert-influence-operations",
+      "source_name": "OpenAI",
+      "published_at": "2024-05-30 10:00:00",
       "source_type": "blog",
       "summary": null
     },

@@ -1,0 +1,85 @@
+name: Scheduled Data Update
+
+on:
+  schedule:
+    # Run every 2 days at midnight UTC
+    - cron: '0 0 */2 * *'
+  workflow_dispatch:  # Allow manual trigger
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  update-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install Python dependencies
+        run: |
+          pip install -r backend/requirements.txt
+
+      - name: Scrape New Data
+        run: |
+          # Run the scraper module
+          python -m backend.scraper
+        env:
+          PYTHONPATH: .
+
+      - name: Generate Static Data
+        run: |
+          python scripts/generate_static_data.py
+        env:
+          PYTHONPATH: .
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "GitHub Actions Bot"
+          git config --global user.email "actions@github.com"
+          
+          # Check if there are changes to commit
+          if [[ -n $(git status -s backend/data.db frontend/public/data.json) ]]; then
+            git add backend/data.db frontend/public/data.json
+            git commit -m "Auto-update: $(date +'%Y-%m-%d')"
+            git push
+          else
+            echo "No changes to commit."
+          fi
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Install frontend dependencies
+        run: |
+          cd frontend
+          npm ci
+
+      - name: Build frontend
+        run: |
+          cd frontend
+          npm run build
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: frontend/dist
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
