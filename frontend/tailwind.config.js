@@ -13,6 +13,7 @@ export default {
         'anthropic': '#d4a574',
         'deepmind': '#4285f4',
         'meta': '#0081fb',
+        'nvidia': '#76b900',
       },
       fontFamily: {
         serif: ['Lora', 'serif'],

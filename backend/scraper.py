@@ -12,7 +12,8 @@ COMPANY_FEEDS = {
     'OpenAI': 'https://openai.com/blog/rss.xml',
     'Anthropic': 'https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic.xml',
     'Google DeepMind': 'https://deepmind.google/blog/rss.xml',
-    'Meta AI': 'https://engineering.fb.com/feed/'
+    'Meta AI': 'https://engineering.fb.com/feed/',
+    'NVIDIA': 'https://blogs.nvidia.com/feed/'
 }
 
 def parse_date(entry):
