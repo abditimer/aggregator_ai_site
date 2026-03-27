@@ -18,7 +18,7 @@ def mock_db():
     c = conn.cursor()
     c.execute('''CREATE TABLE IF NOT EXISTS articles
                  (id INTEGER PRIMARY KEY AUTOINCREMENT,
-                  url TEXT, title TEXT, content TEXT, published_at TIMESTAMP, source_type TEXT, source_name TEXT, created_at TIMESTAMP)''')
+                  url TEXT, title TEXT, content TEXT, published_at TIMESTAMP, source_type TEXT, source_name TEXT, summary TEXT, created_at TIMESTAMP)''')
     c.execute('''CREATE TABLE IF NOT EXISTS summaries
                  (id INTEGER PRIMARY KEY AUTOINCREMENT,
                   timeframe TEXT, summary_text TEXT, article_count INTEGER, generated_at TIMESTAMP)''')

@@ -71,11 +71,12 @@ def generate_summary(timeframe_days, db_path=DB_PATH, model='qwen2.5:0.5b-instru
     
     if not articles:
         conn.close()
-        return
+        return None
         
     article_list = "\n".join([f"[{a['id']}] {a['title']}" for a in articles[:50]])
     
     # 2. Generate Summary based on timeframe
+    summary_text = None
     try:
         import json
         
@@ -111,9 +112,21 @@ def generate_summary(timeframe_days, db_path=DB_PATH, model='qwen2.5:0.5b-instru
                 json.loads(summary_text)
             except:
                 logger.warning("LLM failed to return valid JSON, falling back to text.")
-                # Fallback logic could go here, but for now we trust qwen/ollama json mode
         else:
-             return
+            # Short text summary for 1d/7d
+            prompt = f"""Briefly summarize these AI news headlines in 2-3 sentences. Be concise and highlight the most important updates.
+
+Articles:
+{article_list}
+"""
+            response = ollama.chat(model=model, messages=[
+                {'role': 'user', 'content': prompt},
+            ])
+            summary_text = response['message']['content'].strip()
+
+        if summary_text is None:
+            conn.close()
+            return None
 
         # 3. Store in DB
         timeframe_key = f"{timeframe_days}d" if timeframe_days < 365 else "1y"
@@ -122,9 +135,12 @@ def generate_summary(timeframe_days, db_path=DB_PATH, model='qwen2.5:0.5b-instru
         c.execute("INSERT INTO summaries (timeframe, summary_text, article_count) VALUES (?, ?, ?)", 
                  (timeframe_key, summary_text, len(articles)))
         conn.commit()
-        logger.info(f"Generated structured trend summary for {timeframe_key}")
+        logger.info(f"Generated summary for {timeframe_key}")
         
     except Exception as e:
-        logger.error(f"Error generating trend summary: {e}")
+        logger.error(f"Error generating summary: {e}")
+        conn.close()
+        return None
         
     conn.close()
+    return summary_text
