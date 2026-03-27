@@ -49,7 +49,7 @@ class TestScraper(unittest.TestCase):
         # Run scraper with test db
         count = scrape_blogs(db_path=TEST_DB)
         
-        self.assertEqual(count, 4) # Should be 4 now that URLs are unique
+        self.assertEqual(count, 4) # 4 RSS-based companies (OpenAI, Google DeepMind, Meta AI, NVidia)
         
         c = self.conn.cursor()
         c.execute("SELECT * FROM articles")
