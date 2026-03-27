@@ -18,6 +18,7 @@ def init_db(db_path=DB_PATH):
                   published_at TIMESTAMP NOT NULL,
                   source_type TEXT,
                   source_name TEXT,
+                  summary TEXT,
                   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP)''')
     
     # Summaries table

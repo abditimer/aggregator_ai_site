@@ -20,6 +20,7 @@ class TestScraper(unittest.TestCase):
                       published_at TIMESTAMP NOT NULL,
                       source_type TEXT,
                       source_name TEXT,
+                      summary TEXT,
                       created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP)''')
         self.conn.commit()
 
