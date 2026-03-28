@@ -16,6 +16,10 @@ COMPANY_FEEDS = {
     'NVIDIA': 'https://blogs.nvidia.com/feed/'
 }
 
+def is_valid_url(url: str) -> bool:
+    """Return True if *url* is a non-empty absolute HTTP/HTTPS URL."""
+    return bool(url) and url.startswith(('http://', 'https://'))
+
 def parse_date(entry):
     """Attempt to parse date from feed entry."""
     if hasattr(entry, 'published_parsed') and entry.published_parsed:
@@ -57,8 +61,13 @@ def scrape_anthropic_html(c):
                 if not link: continue
                 
                 if not link.startswith('http'):
+                    if not link.startswith('/'):
+                        link = '/' + link
                     link = f"https://www.anthropic.com{link}"
                 
+                if not is_valid_url(link):
+                    continue
+
                 # FILTER: Exclude legal/policy/careers
                 if any(x in link.lower() for x in ['/legal/', '/careers', '/company', 'policy', 'terms']):
                     continue
@@ -150,6 +159,9 @@ def scrape_blogs(db_path=DB_PATH):
             for entry in feed.entries:
                 try:
                     url = entry.link
+                    if not is_valid_url(url):
+                        logger.warning(f"Skipping entry with invalid URL from {company}: {url!r}")
+                        continue
                     title = entry.title
                     # Some feeds put content in 'content' list, others in 'summary'
                     content = ''
