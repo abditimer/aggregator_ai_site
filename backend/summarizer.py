@@ -107,10 +107,22 @@ def generate_summary(timeframe_days, db_path=DB_PATH, model='qwen2.5:0.5b-instru
             
             summary_text = response['message']['content']
             
-            # Validate JSON
+            # Validate JSON and remove hallucinated article IDs
+            real_ids = {a['id'] for a in articles}
             try:
-                json.loads(summary_text)
-            except:
+                parsed = json.loads(summary_text)
+                for trend in parsed.get('trends', []):
+                    original_ids = trend.get('article_ids', [])
+                    valid_ids = [i for i in original_ids if i in real_ids]
+                    if len(valid_ids) < len(original_ids):
+                        removed = set(original_ids) - set(valid_ids)
+                        logger.warning(
+                            f"Removed hallucinated article IDs {removed} "
+                            f"from trend '{trend.get('name')}'"
+                        )
+                    trend['article_ids'] = valid_ids
+                summary_text = json.dumps(parsed)
+            except json.JSONDecodeError:
                 logger.warning("LLM failed to return valid JSON, falling back to text.")
         else:
             # Short text summary for 1d/7d
